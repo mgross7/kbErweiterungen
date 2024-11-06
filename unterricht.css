@@ -1,0 +1,582 @@
+/**
+ * klassenbuch.css
+ * autor: Matthias Groß
+ * version: 1.22.2
+ */
+
+/*--------------------------------------*/
+:root {
+	interpolate-size: allow-keywords;
+	--bgcolor-grp0: #E2F7D6;
+	--bgcolor-grp1: #BBEBFF;
+	--bgcolor-grp2: #FFFFB5;
+	--bgcolor-grp3: #ff952b;
+	--bgcolor-grp4: #2a6478;
+	/*--bgcolor-grp5: #FFBDBE;*/
+	/*--bgcolor-grp5: #5e7a6b;*/
+	--bgcolor-grp5: #c8e4f3;
+	--bgcolor-grp6: #E8BA86;
+	/*--bgcolor-grp7: #FF7DFF;*/
+	/* --bgcolor-grp7: #d1bc8a;*/
+	--bgcolor-grp7: #1E90FF;
+	--color-grp7: #FFF;
+	
+	--display-plan: none;
+	--display-lesson-details: block;
+	
+	/*--et-grp: is(.et-0, .et-6);*/
+}
+
+
+div.lesson:is(.hidden-element, .hidden-subject) {
+	display: none;
+	/*opacity: 0.1;*/
+}
+
+#divChkBoxes{
+	/*border: skyblue 2px solid;*/
+	display: flex;
+	flex-wrap: wrap;
+
+	padding-inline: 0 1rem;
+}
+
+#divChkBoxes > div {
+	display: flex;
+	/*flex-direction: row;*/
+	align-items: center;
+}
+
+#selSubjects {
+	outline: 0;
+	border: 0;
+	line-height: 1em;
+	height: 1.5em;
+	display: inline-block;
+	position: relative;
+	top: 0.4em;
+	border-radius: 5px;
+}
+
+#selSubjects:focus{
+	outline: 2px solid skyblue;
+	outline-offset: 0px;
+}
+
+#divChkBoxes > div > *,
+#selSubjects{
+	color: #009FE3;
+	cursor: pointer;
+}
+
+#divChkBoxes > div > input,
+#selSubjects {
+	margin-left: 1rem;
+}
+
+#divChkBoxes > div > input:active {
+	outline: none;
+}
+
+#divChkBoxes > div > label {
+	padding-left: 5px;
+	margin-top: 5px;
+}
+
+#divChkBoxes > div > label[disabled] {
+  color: #ccc;
+}
+
+/*#tblWeek div.lesson .lesson-head {*/
+/*	transition: background 500ms, height 500ms;*/
+/*}*/
+
+/*div.lesson .lesson-head {*/
+/*	padding-inline: 0.5em;*/
+/*}*/
+
+/*div.lesson .lesson-head:is(.grp0, .grpCS0):is(.et-0, .et-3, .et-2) {*/
+/*	background: var(--bgcolor-grp0);*/
+/*}*/
+/*div.lesson .lesson-head:is(.grp0, .grpCS0):is(.et-0, .et-2) {*/
+div.lesson .lesson-head:is(.grp0, .grpCS0):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp0);
+}
+
+/*div.lesson .lesson-head:is(.grp0, .grpCS0):is(.et-3, .et-0) {*/
+/*	padding-inline: 0.5em;*/
+/*}*/
+
+div.lesson .lesson-head:is(.et-0, .et-1, .et-2, .et-3, .et-4, .et-5, .et-6, .et-7, .et-8) {
+	padding-inline: 0.5em;
+}
+
+/*div.lesson .lesson-head:is(.grp0, .grpCS0):is(.et-3, .et-2) {*/
+	/*background: var(--bgcolor-grp0);*/
+	/*padding-inline: 0.5em;*/
+	
+	/*outline: 2px solid red;*/
+	/*outline-style: solid;*/
+	/*outline-width: 2px;*/
+	/*outline-offset: -2px;*/
+/*}*/
+
+/*div.lesson .lesson-head:not(.grp0, .grpCS0, .grp1, .grpCS1, .grp2, .grpCS2, .grp3, .grpCS3, .grp4, .grpCS4, .grp5, .grpCS5, .grp6, .grpCS6, .grp7, .grpCS7).et-3 {*/
+	/*color: #F33;*/
+/*	color: #FFF;*/
+/*}*/
+
+div.lesson .lesson-head.et-3:not(.plan) {
+	color: #fff;
+}
+
+div.lesson:has(.lesson-head.et-3) {
+	border-width: 4px;
+	border-color: red;
+	/*border-color: #cc4444;*/
+	/*color: red;*/
+	/*color: #fff;*/
+	border-radius: 0.5em;
+}
+
+/*div.lesson .lesson-head:is(.et-2) {*/
+/*	color: #FFBB33;*/
+/*}*/
+
+div.lesson .lesson-head:is(.grp0, .grpCS0):is(.et-0, .et-6).plan{
+	background: repeating-linear-gradient( 135deg, #FFF, #FFF 10px, var(--bgcolor-grp0) 10px, var(--bgcolor-grp0) 20px );
+	/*transition: background 100ms 500ms, opacity 500ms;*/
+}
+
+div.lesson .lesson-head:is(.grp1, .grpCS1):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp1);
+}
+
+div.lesson .lesson-head:is(.grp1, .grpCS1):is(.et-0, .et-6).plan {
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp1) 10px, var(--bgcolor-grp1) 20px );
+}
+
+div.lesson .lesson-head:is(.grp2, .grpCS2):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp2);
+}
+
+div.lesson .lesson-head:is(.grp2, .grpCS2):is(.et-0, .et-6).plan {
+/*div.lesson .lesson-head:is(.grp2, .grpCS2):is(var(--et-grp)).plan {*/
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp2) 10px, var(--bgcolor-grp2) 20px );
+}
+
+div.lesson .lesson-head:is(.grp3, .grpCS3):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp3);
+	color: white;
+}
+
+div.lesson .lesson-head:is(.grp3, .grpCS3):is(.et-0, .et-1, .et-2, .et-4, .et-5).plan {
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp3) 10px, var(--bgcolor-grp3) 20px );
+	color: #333;
+}
+
+div.lesson .lesson-head:is(.grp4, .grpCS4):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp4);
+  color: #EEE;
+}
+
+div.lesson .lesson-head:is(.grp4, .grpCS4):is(.et-0, .et-6).plan {
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp4) 10px, var(--bgcolor-grp4) 20px );
+	color: #000;
+}
+
+div.lesson .lesson-head:is(.grp5, .grpCS5):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp5);
+	/*color: #ffffff;*/
+}
+
+div.lesson .lesson-head:is(.grp5, .grpCS5):is(.et-0, .et-6).plan {
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp5) 10px, var(--bgcolor-grp5) 20px );
+}
+
+div.lesson .lesson-head:is(.grp6, .grpCS6):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp6);
+}
+
+div.lesson .lesson-head:is(.grp6, .grpCS6):is(.et-0, .et-6).plan {
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp6) 10px, var(--bgcolor-grp6) 20px );
+}
+
+div.lesson .lesson-head:is(.grp7, .grpCS7):is(.et-0, .et-1, .et-2, .et-4, .et-5) {
+	background: var(--bgcolor-grp7);
+	color: var(--color-grp7);
+	/*color: #FFF;*/
+}
+
+div.lesson .lesson-head:is(.grp7, .grpCS7):is(.et-0, .et-6).plan {
+	background: repeating-linear-gradient( 135deg, #ECECEC, #ECECEC 10px, var(--bgcolor-grp7) 10px, var(--bgcolor-grp7) 20px );
+}
+
+div.lesson {
+	border: #666 1px solid;
+	border-radius: 0.3em;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+div.lesson .lesson-head {
+	border-top-right-radius: 0.3em;
+	border-top-left-radius: 0.3em;
+}
+
+#tblWeek div.lesson .lesson-head.plan {
+	/*transition: background 0.3s, color 0.3s, opacity 0.3s;*/
+	/*transition: background 100ms 500ms, opacity 500ms;*/
+}
+
+#tblWeek div.lesson:hover .lesson-head.plan {
+	background: #FFF;
+	color: #000;
+	opacity: 1;
+	/*transition: all 500ms;*/
+}
+
+#tblWeek div.lesson:hover .lesson-head:is(.grp0, .grpCS0):is(.et-0, .et-6).plan{
+	background: repeating-linear-gradient( 135deg, var(--bgcolor-grp0) 0px, var(--bgcolor-grp0) 10px, var(--bgcolor-grp0) 10px, var(--bgcolor-grp0) 20px );
+}
+
+
+/*div.lesson:has(.lesson-head.et-0.plan) {*/
+div.lesson:has(.lesson-head.et-0.plan):not(:is(.hidden-element, .hidden-subject)) {
+	display: var(--display-plan, none);
+}
+
+div.lesson li {
+	font-size: 0.9rem;
+}
+
+div.lesson .lesson-body {
+	padding: 0.5rem;
+}	
+	
+div.lesson :is(.lesson-details, .missing-pupils) > ul {
+	padding-left: 1.5rem;
+	margin-bottom: 0.25rem;
+}
+
+div.lesson:has(.missing-pupils) {
+	overflow: visible;
+	/*transition: overflow 0 0.3s;*/
+}
+
+td:has(div.lesson .missing-pupils){
+	overflow: visible;
+	/*transition: overflow 0 0.3s;*/
+}
+
+div.lesson:has(.missing-pupils):hover {
+	/*overflow: visible;*/
+	/*transition: overflow 0 0.3s;*/
+}
+
+td:has(div.lesson .missing-pupils):hover{
+	/*overflow: visible;*/
+	/*transition: overflow 0 0.3s;*/
+}
+
+div.lesson .missing-pupils {
+	color: #EA2772;
+	position: relative;
+	/*transition: transform 0.3s, background-color 0.3s, color 0.3s; */
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+div.lesson .lesson-body .missing-pupils:hover {
+	position: relative; /*sonst hat z-index keinen Effekt*/
+	/*transform: scale(1.2);*/
+	background-color: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(5px);
+	/*color: white;*/
+	/*min-width: max-content;*/
+	/*min-width: fit-content;*/
+	z-index: 10; /* damit der Haken einer anderen Lektion nicht darüber liegt */
+}
+
+
+div.lesson .lesson-body .missing-pupils .ul-missing-pupils {
+  /* list-style: none;*/
+  list-style-type: '✕';
+  padding-left: 2.5ch;
+  li {
+	  padding-left: 1ch;
+  }
+}
+
+/*
+div.lesson .lesson-body .missing-pupils .ul-missing-pupils li {
+	padding-left: 1ch;
+}*/
+	
+div.lesson .missing-pupils .unclear {
+	color: coral;
+}
+
+div.lesson .missing-pupils .unclear:after {
+	content: ' (Grund unklar)';
+}
+
+div.lesson .missing-pupils .excused {
+	color: #06c947;
+}
+
+div.lesson .missing-pupils .excused:after {
+	content: ' (entschuldigt)';
+}
+
+div.lesson .missing-pupils .unexcused {
+	color: #ff446f;
+	/*color: #ff495f;*/
+	/*color: red;*/
+	/*font-weight: bold;*/
+}
+
+div.lesson .missing-pupils .unexcused:after {
+	content: ' (unentschuldigt)';
+}
+
+/*
+div.lesson .missing-pupils li::marker {
+  color: #ff5555;
+}
+
+div.lesson .missing-pupils li::before {
+  content: '✕';
+  // color: #ff5555;
+  margin-right: 1ch;
+}
+
+div.lesson .missing-pupils .is-present::marker {
+  color: lime;
+}
+
+div.lesson .missing-pupils .is-present::before {
+  content: '✓';
+  // color: lime;
+  margin-right: 1ch;
+}
+
+div.lesson .missing-pupils .message {
+	color: #666;
+	transition: color 0.3s;
+}
+*/
+
+div.lesson .missing-pupils:hover .message {
+	color: #ccc;
+}
+
+div.lesson .missing-pupils {
+	/* margin: 0.75em 0 0 0;*/
+	margin: 0.75em 0 0.75em 0;
+	padding: 0.25em 1em 0.5em;
+	outline: 1.2px solid #EA2772;
+	outline-offset: 0.15em ;
+	border-radius: 0.3em;
+	cursor: default;
+	/*box-shadow: 1px 1px 3px;*/
+}
+
+div.lesson .missing-pupils .class-name {
+  white-space: nowrap;	
+}
+
+div.lesson .missing-pupils .ul-missing-pupils {
+	margin: 0;
+}
+
+/* --------------------------------------------------*/
+div.lesson .missing-pupils .ul-missing-pupils {
+	overflow: hidden;
+	/*scrollbar-color: #fff599 #EA2772;*/
+	scrollbar-color: #FFFFB5 #EA2772;
+	opacity: 0;
+	height: 0;
+	max-height: 11em;
+	
+	transition: height 0.6s 0.35s, opacity 0.6s 0.15s;
+}
+
+div.lesson .missing-pupils:hover .ul-missing-pupils {
+	max-height: 11em;
+	opacity: 1;
+	overflow-y: auto;
+	scrollbar-color: #FFFFB5 #EA2772;
+	scrollbar-width: thin;
+	height: auto;
+	transition: height 0.6s 0.15s, opacity 0.6s 0.45s;
+}
+/* --------------------------------------------------*/
+
+div.lesson li > ul {
+	padding-left: 1rem;
+}
+
+div.lesson .lesson-details li:nth-of-type(odd) {
+	color: #888;
+}
+
+div.lesson .lesson-details li::marker {
+	color: #888;
+}
+
+div.lesson .lesson-head:is(.et-6) {
+	background: #ea2772;
+	border-radius: 0.5em 0.5em 0em 0em;
+}
+
+div.lesson .lesson-head:is(.grp0, .grp1, .grp2, .grp3, .grp4, .grp5, .grp6, .grp7):is(.et-6, .et-3) {
+	position: relative;
+	height: 3.7em;
+	/*width: 100%;*/
+	/*display: flex;*/
+}
+
+div.lesson:has(.lesson-head:is(.et-6)) {
+	border-color: #ea2772;
+}
+
+div.lesson:has(.lesson-head:is(.grp0, .grp1, .grp2, .grp3, .grp4, .grp5, .grp6, .grp7):is(.et-1, .et-2, .et-3, .et-4, .et-5, .et-6, .et-7, .et-8)) {
+	/*border-color: #ea2772;*/
+	border-radius: 0.5em;
+	border-width: 3px;
+	/*border-color: orange;*/
+}
+
+div.lesson:has(.lesson-head:is(.et-1, .et-2, .et-4, .et-5, .et-7, .et-8)) {
+	border-color: coral;
+}
+
+/*div.lesson .lesson-head:is(.et-6, .et-7, .et-3):not(.plan) {*/
+div.lesson .lesson-head:is(.et-6, .et-7):not(.plan) {
+	color: white;
+}
+
+div.lesson .lesson-head:is(.et-6, .et-8, .et-7):before {
+  font-weight: 700;
+}
+
+
+/*div.lesson .lesson-head:is(.et-6, .et-7, .et-8) .i {*/
+div.lesson .lesson-head:is(.et-6) .i {
+  display: none;
+}
+
+div.lesson .lesson-head:is(.et-6):before {
+  content: 'LK';
+}
+
+div.lesson .lesson-head:is(.grp0, .grp1, .grp2, .grp3, .grp4, .grp5, .grp6, .grp7):is(.et-6, .et-3):after {
+  content: '';
+  display: block;
+  position: absolute;
+  /*border: 2px solid navy;*/
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid #333;
+  border-top: 1px solid #333;
+  /*border-width: 1.5px;*/
+  left: 1em;
+  height: 1em;
+  top: 2em;
+  right: 1em;
+  /*background: navy;*/
+}
+
+div.lesson .lesson-head:is(.grp0):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp0);
+}
+
+div.lesson .lesson-head:is(.grp1):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp1);
+}
+
+div.lesson .lesson-head:is(.grp2):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp2);
+}
+div.lesson .lesson-head:is(.grp3):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp3);
+}
+div.lesson .lesson-head:is(.grp4):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp4);
+}
+div.lesson .lesson-head:is(.grp5):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp5);
+}
+div.lesson .lesson-head:is(.grp6):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp6);
+}
+div.lesson .lesson-head:is(.grp7):is(.et-6, .et-3):after {
+	background: var(--bgcolor-grp7);
+}
+
+div.lesson .lesson-body * {
+	margin-bottom: 0.15em;
+}
+
+/*div.lesson .lesson-head:is(.et-7):before {*/
+/*  content: 'P';*/
+/*}*/
+
+/*div.lesson .lesson-head:is(.et-8):before {*/
+/*  content: 'B';*/
+/*}*/
+
+/*.btn-group :is(#btnWeekNext, #btnWeekBack, #btnWeekStart),*/
+/*#btnSave, #btnLSave, #btnLDelete {*/
+button[type='button'],
+.form-control,
+.nav-item{
+	border-radius: 10px;
+	margin-right: 7px;
+}
+
+.nav-item {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+
+@media print
+{    
+    .noprint, .noprint *
+    {
+        display: none;
+    }
+}
+
+/*#mdEditor .modal-content{*/
+/*	min-height: 90vh;*/
+/*}*/
+
+#mdEditor .modal-content #taMemo{
+	min-height: 8rem;
+}
+
+#mdEditor #ulMissingPupils span.d{
+	cursor: pointer;
+}
+
+table.week td.cell.allday {
+	background-color: lightyellow;
+}
+
+#vertretungsPlan {
+	display: flex;
+	align-items: center;
+}
+
+#navTop {
+	display: block;
+}
+#navTop .row.mb-2 {
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+.pt-2, .py-2 {
+	padding-top: 0 !important;
+}
