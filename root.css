@@ -1,0 +1,16 @@
+button[type='button'],
+.form-control,
+.nav-item,
+.btn{
+	border-radius: 10px;
+	margin-right: 7px;
+}
+
+.nav-item {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#btnSave span:first-letter {
+	text-decoration: underline;
+}
