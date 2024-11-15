@@ -553,6 +553,10 @@ button[type='button'],
 /*	min-height: 90vh;*/
 /*}*/
 
+#mdEditor .modal-content {
+	border-radius: 1em;
+}
+
 #mdEditor .modal-content #taMemo{
 	min-height: 8rem;
 }
