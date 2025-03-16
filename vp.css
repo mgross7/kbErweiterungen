@@ -1,68 +1,16 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.c-hidden {
+  display: none;
 }
 
-body {
-  padding: 0.5rem 2ch;
-  color: cornflowerblue;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.settings {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1.1ch;
-
-  & label {
-    font-size: 1rem;
-  }
-
-  & input#active {
-    background-color: red;
-
-    & + label {
-      color: red;
-      transition: color 0.35s;
-    }
-  }
-
-  & input#active:checked {
-    background-color: green;
-
-    & + label {
-      color: green;
-    }
-  }
-}
-
-#reload {
-  width: 100%;
-  margin-block: 0.75rem;
-  padding-block: 0.25rem;
-  border: 1px solid lightcoral;
-  border-radius: 5px;
-  outline: 1px solid lightcoral;
-  outline-offset: -1px;
-  transition: outline-offset 0.3s;
-
-  &:is(:focuse, :hover) {
-    outline-offset: 2px;
-  }
-
-  &:active {
-    transform: scale(0.99);
-  }
+#inputFilter {
+  margin: 0.5em 0.5em 0;
+  display: block;
+  font-size: 0.9em;
+  font-family: inherit;
+  width: 8em;
+  border-radius: 1em;
+  border: 1px solid #333;
+  /*padding-left: 1em;*/
+  /*padding-right: 0.5em;*/
+  padding-inline: 0.6em;
 }
