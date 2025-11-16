@@ -1,0 +1,32 @@
+.scroller-v table tr.hidden {
+	display: none
+}
+
+#pupilsList {
+	max-width: 13em;
+	border-radius: 5px;
+}
+
+#xgrid .xcell.c-0-1 .scroller-v td {
+	cursor: pointer;
+}
+
+#xgrid .xcell.c-1-1 td[class*="cell--2-"] {
+	// color: lime;
+}
+
+#navTop {
+	display: block;
+}
+#navTop .row.mb-2 {
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+.pt-2, .py-2 {
+	padding-top: 0 !important;
+}
+
+#c-1-1-m  > tr > td:nth-child(4).warning{
+	color: red;
+	font-weight: bold;
+}
