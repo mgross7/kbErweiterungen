@@ -1,0 +1,21 @@
+.hidden {
+	display: none;
+}
+
+#tblMissings{
+  width: fit-content;	
+}
+
+#tblMissings td,
+#tblPupils td {
+	min-width: fit-content;
+}
+
+#tblMissings tbody td:first-child {
+	width: 10em;
+}
+
+#tblMissings td.bg-excused,
+#tblPupils :is(td,th).bg-excused{
+	background: #59a985 !important;
+}
