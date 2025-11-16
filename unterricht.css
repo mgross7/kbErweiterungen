@@ -240,6 +240,13 @@ div.lesson .lesson-head {
 	background: repeating-linear-gradient( 135deg, var(--bgcolor-grp0) 0px, var(--bgcolor-grp0) 10px, var(--bgcolor-grp0) 10px, var(--bgcolor-grp0) 20px );
 }
 
+#tblWeek tbody td.cell {
+	cursor: cell;
+}
+
+#tblWeek tbody td.cell .lesson {
+	cursor: pointer;
+}
 
 /*div.lesson:has(.lesson-head.et-0.plan) {*/
 div.lesson:has(.lesson-head.et-0.plan):not(:is(.hidden-element, .hidden-subject)) {
@@ -585,10 +592,3 @@ table.week td.cell.allday {
 	padding-top: 0 !important;
 }
 
-#tblWeek tbody td.cell {
-	cursor: cell;
-}
-
-#tblWeek tbody td.cell .lesson {
-		cursor: pointer;
-}
