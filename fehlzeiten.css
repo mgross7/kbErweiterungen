@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.infullday {
+	display: none;
+}
+
 #tblMissings{
   width: fit-content;	
 }
