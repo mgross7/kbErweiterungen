@@ -15,9 +15,18 @@
 	min-width: fit-content;
 }
 
-#tblMissings tbody td:first-child {
-	width: 10em;
+#tblMissings tbody td {
+	:first-child {
+	  width: 10em;
+	};
+	;nth-child(2) {
+	  min-width: 15em; 	
+	}
 }
+
+/* #tblMissings tbody td:first-child {
+	width: 10em;
+} */
 
 #tblMissings td.bg-excused,
 #tblPupils :is(td,th).bg-excused{
