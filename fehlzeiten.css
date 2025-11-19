@@ -26,13 +26,14 @@
 }
 
 #tblMissings tbody tr {
-	&:nth-child(odd) {
+	background-color: #fff;
+	/* &:nth-child(odd) {
 		background-color: #fff;
 	}
 
 	&:nth-child(even) {
 		background-color: #eee;
-	}
+	} */
 }
 
 /* #tblMissings tbody td:first-child {
