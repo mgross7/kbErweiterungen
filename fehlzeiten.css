@@ -25,15 +25,15 @@
 	}
 }
 
-#tblMissings tbody tr {
-	background-color: #fff;
-	/* &:nth-child(odd) {
+#tblMissings tbody tr:not(.infullday) {
+	/* background-color: #fff; */
+	&:nth-child(odd) {
 		background-color: #fff;
 	}
 
 	&:nth-child(even) {
 		background-color: #eee;
-	} */
+	}
 }
 
 /* #tblMissings tbody td:first-child {
