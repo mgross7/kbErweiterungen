@@ -89,6 +89,7 @@ document.addEventListener('keydown', (event) => {
     }
 })
 
-init(); //2025-11-16
+// init(); //2025-11-16
 let observer = new MutationObserver(init);
 observer.observe(document.querySelector('body'), {childList: true, subtree: true});
+
