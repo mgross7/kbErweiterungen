@@ -335,7 +335,8 @@ const rotaryWeeks = [
     'H-BFS',
     'H-BVJ',
   ],
-  [],[], //Herbstferien
+  [],
+  [], //Herbstferien
   [
     'H-FI23-1',
     'H-FI23-2',
@@ -462,7 +463,8 @@ const rotaryWeeks = [
     'H-BFS',
     'H-BVJ',
   ],
-  [],[], //Weihnachtsferien
+  [],
+  [], //Weihnachtsferien
   [
     'H-FI25-1',
     'H-FI25-2',
@@ -547,8 +549,9 @@ const rotaryWeeks = [
     'H-BFS',
     'H-BVJ',
   ],
-  [],[], //Winterferien
-    [
+  [],
+  [], //Winterferien
+  [
     'H-FI25-1',
     'H-FI25-2',
     'H-IK25',
@@ -632,7 +635,8 @@ const rotaryWeeks = [
     'H-BFS',
     'H-BVJ',
   ],
-  [],[], //Osterferien
+  [],
+  [], //Osterferien
   [
     'H-FI23-1',
     'H-FI23-2',
@@ -2343,6 +2347,7 @@ chkColoringClasses.click();
 chkMyLessons.click();
 
 checkOnlyMyLessons();
+
 
 
 
