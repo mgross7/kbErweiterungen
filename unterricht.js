@@ -222,6 +222,7 @@ function markdown(src) {
 
 //------------------------------------------------------------------------
 const rotaryWeeks = [
+  [],
   [
     'H-FI23-1',
     'H-FI23-2',
@@ -2342,4 +2343,5 @@ chkColoringClasses.click();
 chkMyLessons.click();
 
 checkOnlyMyLessons();
+
 
