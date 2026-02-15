@@ -1,7 +1,7 @@
 /**
  * klassenbuch.css
  * autor: Matthias Groß
- * version: 1.22.2
+ * version: 1.22.3
  */
 
 /*--------------------------------------*/
@@ -565,7 +565,14 @@ button[type='button'],
 }
 
 #mdEditor .modal-content #taMemo{
-	min-height: 8rem;
+	min-height: 8em;
+	field-sizing: content;
+	max-height: 20em;
+}
+
+#mdEditor .modal-content #taHomeworkMemo{
+    field-sizing: content;
+	max-height: 20em;
 }
 
 #mdEditor #ulMissingPupils span.d{
@@ -591,4 +598,5 @@ table.week td.cell.allday {
 .pt-2, .py-2 {
 	padding-top: 0 !important;
 }
+
 
