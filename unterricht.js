@@ -548,7 +548,6 @@ const rotaryWeeks = [
     'H-BFS',
     'H-BVJ',
   ],
-  [],
   [], //Winterferien
   [
     'H-FI25-1',
@@ -2346,6 +2345,7 @@ chkColoringClasses.click();
 chkMyLessons.click();
 
 checkOnlyMyLessons();
+
 
 
 
