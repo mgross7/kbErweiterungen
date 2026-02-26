@@ -560,6 +560,15 @@ button[type='button'],
 /*	min-height: 90vh;*/
 /*}*/
 
+#mdEditor {
+	opacity: 0;
+	transition: opacity 500ms;
+	
+	&.show {
+		opacity: 1;
+	}
+}
+
 #mdEditor .modal-content {
 	border-radius: 1em;
 }
@@ -599,6 +608,7 @@ table.week td.cell.allday {
 .pt-2, .py-2 {
 	padding-top: 0 !important;
 }
+
 
 
 
