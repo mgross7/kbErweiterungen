@@ -601,6 +601,15 @@ button[type='button'],
 	cursor: pointer;
 }
 
+#mdEditor #ulClassesOrGroups {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2ch;
+    flex-direction: column;
+    line-height: 1.25em;
+    width: 100%;
+}
+
 table.week td.cell.allday {
 	background-color: lightyellow;
 }
