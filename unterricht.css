@@ -1,7 +1,7 @@
 /**
  * klassenbuch.css
  * autor: Matthias Groß
- * version: 1.22.3
+ * version: 1.22.4
  */
 
 /*--------------------------------------*/
@@ -307,10 +307,22 @@ div.lesson .lesson-body .missing-pupils:hover {
 
 div.lesson .lesson-body .missing-pupils .ul-missing-pupils {
   /* list-style: none;*/
-  list-style-type: '✕';
+  /* list-style-type: '✕'; */
   padding-left: 2.5ch;
   li {
 	  padding-left: 1ch;
+  }
+
+  .unclear {
+	list-style-type: "\FE16"; /* Fragezeichen */
+  }
+	
+  .excused {
+	list-style-type: "✓";
+  }
+	
+  .unexcused {
+	list-style-type: "✗";
   }
 }
 
