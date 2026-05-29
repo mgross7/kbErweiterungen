@@ -1,7 +1,7 @@
 /**
  * klassenbuch.js
  * autor: Matthias Groß
- * version: 1.22.2
+ * version: 1.22.3
  */
 
 // console.log(LessonDocs);
@@ -1415,17 +1415,17 @@ btnGroup1.insertBefore(btnWeekNext, btnWeekStart);
 // console.log(btnGroup1);
 //------------------------------------------------------------------------
 
-const btnVertretungsPlan = document.createElement('a');
-btnVertretungsPlan.setAttribute('id', 'vertretungsPlan');
-btnVertretungsPlan.setAttribute('type', 'button');
-btnVertretungsPlan.setAttribute('href', 'https://www.sbsz-hsp.de/sdb/getPlan/');
-// btnVertretungsPlan.setAttribute('target', 'vertretungsPlan');
-btnVertretungsPlan.setAttribute('target', 'vertretungsplan');
+// const btnVertretungsPlan = document.createElement('a');
+// btnVertretungsPlan.setAttribute('id', 'vertretungsPlan');
+// btnVertretungsPlan.setAttribute('type', 'button');
+// btnVertretungsPlan.setAttribute('href', 'https://www.sbsz-hsp.de/sdb/getPlan/');
+// // btnVertretungsPlan.setAttribute('target', 'vertretungsPlan');
+// btnVertretungsPlan.setAttribute('target', 'vertretungsplan');
 
-btnVertretungsPlan.classList.add('btn', 'btn-outline-primary', 'noprint');
-btnVertretungsPlan.innerHTML =
-  '<span class="d-none d-sm-inline-block">Vertretungplan</span>';
-btnGroup1.appendChild(btnVertretungsPlan);
+// btnVertretungsPlan.classList.add('btn', 'btn-outline-primary', 'noprint');
+// btnVertretungsPlan.innerHTML =
+//   '<span class="d-none d-sm-inline-block">Vertretungplan</span>';
+// btnGroup1.appendChild(btnVertretungsPlan);
 
 // btnVertretungsPlan.addEventListener('click', event => {
 // 	spnWeek = document.querySelector('#spnWeek');
